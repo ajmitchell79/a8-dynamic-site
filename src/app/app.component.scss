@@ -1,0 +1,8 @@
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  height: 56px;
+}
+
+::ng-deep .mat-sidenav-container {
+  height: calc(100vh - 58px) !important; /* or 100% */
+}

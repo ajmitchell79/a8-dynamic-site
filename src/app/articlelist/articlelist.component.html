@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row mt-1">
+    <div class="col-12" *ngFor="let article of articles">
+      <div
+        class="card mb-3"
+        style="min-height:150px;background-color: dimgrey;"
+      >
+        <div class="card-body text-center mt-4">
+          <div class="container-fluid p-0">
+            <div class="row">
+              <div class="col-2">
+                <img
+                  src="{{ article.Image }}"
+                  style="width: 240px;height:190px;"
+                />
+              </div>
+              <div class="col-10 text-left">
+                <h2>
+                  <a
+                    [routerLink]="'/article/' + getUrlFor(article.Name)"
+                    style="color:#FFF"
+                  >
+                    {{ article.Name }}</a
+                  >
+                </h2>
+                <br />
+                {{ article.Description }}.........
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row p-5">
+    <div class="col-sm-2" *ngFor="let conceptItem of conceptItems">
+      <div
+        class="card mb-3"
+        style="min-height:150px;background-color: dimgrey;"
+      >
+        <div class="card-body text-center mt-4">
+          <h3 class="card-title">
+            <a
+              style="color:#FFF"
+              [routerLink]="'/article-list/' + conceptItem.Name.toLowerCase()"
+              >{{ conceptItem.Name }}</a
+            >
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

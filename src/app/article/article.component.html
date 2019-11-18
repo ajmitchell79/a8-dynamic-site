@@ -1,0 +1,23 @@
+<div class="bg">
+  <table width="90%" height="90%" border="0">
+    <tr>
+      <td colspan="3" width="75%" height="20px"><div class="title"><h2>{{article.title}}</h2></div></td>
+    </tr>
+    <tr>
+      <td colspan="3" height="20px"><div class="author">{{article.author}}</div></td>
+    </tr>
+    <tr>
+      <td valign="top" width="55%"><div class="description">{{article.description}}</div></td>
+      <td valign="top" height="20px"><div class="picture"><img [src]="article.imageUrl" /></div></td>
+      <td valign="top" rowspan="2" width="25%">
+        <div class="tags">
+          <app-tag *ngFor="let tag of article.tags" [tag]="tag"></app-tag>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" colspan="2"><div>{{article.body}}</div></td>
+    </tr>
+  </table>
+</div>
+
